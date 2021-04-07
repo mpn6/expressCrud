@@ -1,30 +1,24 @@
-Prerequisites:
-Install Node:
-https://nodejs.org/en/download/
+Michelle Nunez
 
+WebPack API CRUD HW
 
-Install Webpack Globally by running this command on your terminal / command prompt
+Directions: "Put screen shots of the CRUD operations in your ReadmeFile, so I can see that the requests work through PostMan."
 
-npm install --global webpack
+**Operation: get / findAll**
 
-Webpack Documentation: https://webpack.js.org/
+<img width="500" alt="Screen Shot 2021-04-06 at 9 52 50 PM" src="https://user-images.githubusercontent.com/56059162/113799206-a225ca80-9722-11eb-92f4-0db276ee7168.png">
 
-To Use:
+**Operation: get / findById**
 
-1.  Clone the Repo
-2.  Run npm install
-3.  Run webpack serve to live reload your project, so you can see changes without refreshing the browser
-4.  Once it's running you can go to the dev server and see your changes: http://localhost:9000/
-5.  **run "webpack build" to bundle your code and put it in the docs folder so github pages can serve it**
+<img width="500" alt="Screen Shot 2021-04-06 at 10 04 19 PM" src="https://user-images.githubusercontent.com/56059162/113800047-3cd2d900-9724-11eb-839e-ddce8dace7ce.png">
 
-Press Control C to stop the server or the builder
+**Operation: delete / delete**
 
-Turn on github pages and put a link to your site in the readme when you turn in the github repo link.
+<img width="500" alt="Screen Shot 2021-04-06 at 10 15 26 PM" src="https://user-images.githubusercontent.com/56059162/113800910-cb942580-9725-11eb-8c0e-a2912f84383c.png">
 
-Working site here:
+**Operation: put / update**
 
-http://www.webizly.com/BasicWebPack/
+<img width="500" alt="Screen Shot 2021-04-06 at 10 28 10 PM" src="https://user-images.githubusercontent.com/56059162/113801814-925cb500-9727-11eb-84e2-0b3e6d047a3f.png">
 
-Based on this tutorial:
-
-https://medium.com/@rahulguptalive/create-crud-apis-in-nodejs-express-and-mysql-abda4dfc2d6
+**Operation: post / create**
+<img width="1281" alt="Screen Shot 2021-04-06 at 10 30 27 PM" src="https://user-images.githubusercontent.com/56059162/113801979-e5366c80-9727-11eb-91d7-238c5478e6e1.png">
