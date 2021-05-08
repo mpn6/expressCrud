@@ -12,7 +12,7 @@ getJSON('http://localhost:8000/api/v1/cities',
     if (err !== null) {
       alert(`Something went wrong: ${err}`);
     } else {
-      const table = document.querySelector("table");
+      const table = document.querySelector('table');
       const data = Object.keys((records.data[0]));
       const dataRecords = records.data;
 
@@ -28,25 +28,25 @@ getJSON('http://localhost:8000/api/v1/cities',
 ConsoleLogIt('this workedss  in the bundle');
 
 function generateTableHead(table, data) {
-    const thead = table.createTHead();
-    const row = thead.insertRow();
-    for (let key of data) {
-        let th = document.createElement("th");
-        let text = document.createTextNode(key);
-        th.appendChild(text);
-        row.appendChild(th);
-    }
+  const thead = table.createTHead();
+  const row = thead.insertRow();
+  for (const key of data) {
+    const th = document.createElement('th');
+    const text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+  }
 }
 
 function generateTable(table, data) {
-    for (let element of data) {
-        let row = table.insertRow();
-        console.log(element);
-        let key;
-        for (key in element) {
-            let cell = row.insertCell();
-            let text = document.createTextNode(element[key]);
-            cell.appendChild(text);
-        }
+  for (const element of data) {
+    const row = table.insertRow();
+    console.log(element);
+    let key;
+    for (key in element) {
+      const cell = row.insertCell();
+      const text = document.createTextNode(element[key]);
+      cell.appendChild(text);
     }
+  }
 }
