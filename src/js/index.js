@@ -35,8 +35,7 @@ getJSON('http://localhost:8000/api/v1/cities',
   (err, records) => {
     if (err !== null) {
       alert(`Something went wrong: ${err}`);
-    }
-    else {
+    } else {
       const table = document.querySelector('table');
       const data = Object.keys((records.data[0]));
       const dataRecords = records.data;
