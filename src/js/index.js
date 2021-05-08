@@ -1,6 +1,6 @@
-import TestJS from "./TestJs";
-import ConsoleLogIt from "./ConsoleLogIt";
-import getJSON from "./getJSON";
+import TestJS from './TestJs';
+import ConsoleLogIt from './ConsoleLogIt';
+import getJSON from './getJSON';
 
 TestJS();
 getJSON("", function (data) {
