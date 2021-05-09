@@ -10,10 +10,10 @@ block layout-content
             span.Details Access the Web Portal
         div.NavButtons
             if isAuthenticated
-                a(href="http://localhost:8000")
-                    div.NavButton View Records
                 a(href="/user")
                     div.NavButton My Profile
+                a(href="http://localhost:8000")
+                    div.NavButton View Records
                 a(href="/logout")
                     div.NavButton Logout
             else
