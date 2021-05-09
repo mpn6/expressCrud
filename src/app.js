@@ -27,9 +27,16 @@ app.set('view engine', 'hbs');
 
 // Our requests hadlers will be implemented here...
 
+app.get('/', function (req, res) {
+    res.render('home');
+});
+
 app.get('/register', (req, res) => {
     res.render('register');
 });
+
+
+app.listen(3000);
 
 const users = [
     // This user is added to the array to avoid creating a new user on each restart
@@ -80,9 +87,6 @@ app.post('/register', (req, res) => {
         });
     }
 });
-
-
-app.listen(3000);
 
 
 
