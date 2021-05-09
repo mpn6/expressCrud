@@ -111,6 +111,20 @@ app.get('/user', secured, (req, res, next) => {
     });
 });
 
+// This route is not needed authentication
+app.get('/api/public', (req, res) => {
+    res.json({
+        message: 'Hello from a public endpoint! Authentication is not needed to see this.',
+    });
+});
+
+// This route is needed authentication
+app.get('/api/private', checkJwt, (req, res) => {
+    res.json({
+        message: 'Hello from a private endpoint! Authentication is needed to see this.',
+    });
+});
+
 app.post('/api/edit', (req, res) => {
     dbConn.run('DELETE FROM tblCitiesImport WHERE id = ?', [req.body.id], (err, res) => {
         if (err) {
