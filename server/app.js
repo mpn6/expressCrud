@@ -7,6 +7,9 @@ const app = express();
 app.use(cors())
 app.use(express.static('docs'));
 
+const jwt = require('jsonwebtoken');
+const cityController = require('./controllers/cities.controllers');
+
 // create express app
 
 
