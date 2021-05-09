@@ -2,16 +2,20 @@ extends layout
 
 block layout-content
     div.View.WelcomeView
-        h1.Banner WHATABYTE
+        h1.Banner City Records Database
         div.Message
             div.Title
-                h3 Making the Best
-                h1 Food For Devs
-            span.Details Access the WHATABYTE Team Portal
+                h3 IS219 Final Project
+                h1 Cities Project
+            span.Details Access the Web Portal
         div.NavButtons
             if isAuthenticated
+                a(href="http://localhost:8000")
+                    div.NavButton View Records
                 a(href="/user")
-                    div.NavButton Just dive in!
+                    div.NavButton My Profile
+                a(href="/logout")
+                    div.NavButton Logout
             else
                 a(href="/login")
                     div.NavButton Log in
