@@ -1,83 +1,24 @@
-/**
- * Required External Modules
- */
+import TestJS from './TestJs';
+import ConsoleLogIt from './ConsoleLogIt';
+import getJSON from './getJSON';
+import Table from './Table';
 
-const express = require("express");
-const path = require("path");
-
-const expressSession = require("express-session");
-const passport = require("passport");
-const Auth0Strategy = require("passport-auth0");
-
-require("dotenv").config();
-
-/**
- * App Variables
- */
-
-const app = express();
-const port = process.env.PORT || "8000";
-
-/**
- * Session Configuration (New!)
- */
-
-const session = {
-    secret: process.env.SESSION_SECRET,
-    cookie: {},
-    resave: false,
-    saveUninitialized: false
-};
-
-if (app.get("env") === "production") {
-    // Serve secure cookies, requires HTTPS
-    session.cookie.secure = true;
-}
-
-
-
-/**
- * Passport Configuration (New!)
- */
-const strategy = new Auth0Strategy(
-    {
-        domain: process.env.AUTH0_DOMAIN,
-        clientID: process.env.AUTH0_CLIENT_ID,
-        clientSecret: process.env.AUTH0_CLIENT_SECRET,
-        callbackURL: process.env.AUTH0_CALLBACK_URL
-    },
-    function(accessToken, refreshToken, extraParams, profile, done) {
-        /**
-         * Access tokens are used to authorize users to an API
-         * (resource server)
-         * accessToken is the token to call the Auth0 API
-         * or a secured third-party API
-         * extraParams.id_token has the JSON Web Token
-         * profile has all the information from the user
-         */
-        return done(null, profile);
-    }
-);
-
-
-
-/**
- *  App Configuration
- */
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
-app.use(express.static(path.join(__dirname, "public")));
-
-app.use(expressSession(session));
-
-passport.use(strategy);
-app.use(passport.initialize());
-app.use(passport.session());
-
-passport.serializeUser((user, done) => {
-    done(null, user);
+TestJS();
+getJSON('', (data) => {
+    console.log(data);
 });
 
-passport.deserializeUser((user, done) => {
-    done(null, user);
-});
+getJSON('http://localhost:8000/api/v1/cities',
+    (err, records) => {
+        if (err !== null) {
+            alert(`Something went wrong: ${err}`);
+        } else {
+            const table = document.querySelector('table');
+            const data = Object.keys((records.data[0]));
+            const dataRecords = records.data;
+
+            Table.generateTableHead(table, data);
+            Table.generateTable(table, dataRecords);
+        }
+    });
+ConsoleLogIt('this workeds  in the bundle');
