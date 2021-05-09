@@ -89,6 +89,9 @@ passport.deserializeUser((user, done) => {
     done(null, user);
 });
 
+// Router mounting
+app.use("/", authRouter);
+
 /*
 'use strict';
 
