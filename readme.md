@@ -1,24 +1,18 @@
-Michelle Nunez
+Screenshots of the application running:
 
-WebPack API CRUD HW
+Home Page:
 
-Directions: "Put screen shots of the CRUD operations in your ReadmeFile, so I can see that the requests work through PostMan."
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/56059162/117557150-0d263200-b03e-11eb-9436-ebddcef837fa.png">
 
-**Operation: get / findAll**
+Login Page:
 
-<img width="800" alt="Screen Shot 2021-04-06 at 9 52 50 PM" src="https://user-images.githubusercontent.com/56059162/113799206-a225ca80-9722-11eb-92f4-0db276ee7168.png">
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/56059162/117557159-23cc8900-b03e-11eb-880b-4f4cfd22f90c.png">
 
-**Operation: get / findById**
+Registration Page:
 
-<img width="800" alt="Screen Shot 2021-04-06 at 10 04 19 PM" src="https://user-images.githubusercontent.com/56059162/113800047-3cd2d900-9724-11eb-839e-ddce8dace7ce.png">
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/56059162/117557161-2c24c400-b03e-11eb-8ef5-320d0df6629f.png">
 
-**Operation: delete / delete**
+Protected page showing the cities data:
 
-<img width="800" alt="Screen Shot 2021-04-06 at 10 15 26 PM" src="https://user-images.githubusercontent.com/56059162/113800910-cb942580-9725-11eb-8c0e-a2912f84383c.png">
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/56059162/117557165-36df5900-b03e-11eb-9143-30779d6e8847.png">
 
-**Operation: put / update**
-
-<img width="800" alt="Screen Shot 2021-04-06 at 10 28 10 PM" src="https://user-images.githubusercontent.com/56059162/113801814-925cb500-9727-11eb-84e2-0b3e6d047a3f.png">
-
-**Operation: post / create**
-<img width="800" alt="Screen Shot 2021-04-06 at 10 30 27 PM" src="https://user-images.githubusercontent.com/56059162/113801979-e5366c80-9727-11eb-91d7-238c5478e6e1.png">
