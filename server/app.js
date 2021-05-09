@@ -7,7 +7,10 @@ require('dotenv').config();
 const open = require('open');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
 const authRouter = require('./auth');
+const citiesRoutes = require('./routes/cities.routes');
+
 // App Variables
 const app = express();
 const port = process.env.PORT || '3000';
@@ -77,7 +80,6 @@ app.get('/user', secured, (req, res, next) => {
         userProfile: userProfile,
     });
 });
-
 app.get('/protected', (req, res) => {
     if (req.user) {
         res.render('C:\\Users\\qnguy\\Desktop\\BasicWebPackESLintProfessor\\IS219FinalProject\\src\\index.html');
@@ -88,6 +90,9 @@ app.get('/protected', (req, res) => {
         });
     }
 });
+
+// using as middleware
+app.use('/api/v1/cities', citiesRoutes);
 
 app.listen(port, () => {
     console.log(`Listening to requests on http://localhost:${port}`);
