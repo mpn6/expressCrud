@@ -1,4 +1,19 @@
+/**
+ * Required External Modules
+ */
+
+const express = require("express");
+const path = require("path");
+
+const expressSession = require("express-session");
+const passport = require("passport");
+const Auth0Strategy = require("passport-auth0");
+
+require("dotenv").config();
+
+/*
 'use strict';
+
 const express = require('express');
 const open = require("open");
 const bodyParser = require('body-parser');
@@ -35,3 +50,5 @@ app.listen(app.get('port'), function() {
     open("http://localhost:8000");
 
 });
+
+ */
