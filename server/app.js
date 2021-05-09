@@ -1,32 +1,4 @@
-const express = require('express');
-const exphbs = require('express-handlebars');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
-
-const app = express();
-
-// To support URL-encoded bodies
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// To parse cookies from the HTTP Request
-app.use(cookieParser());
-
-app.engine('hbs', exphbs({
-    extname: '.hbs'
-}));
-
-app.set('view engine', 'hbs');
-
-// Our requests hadlers will be implemented here...
-
-app.listen(3000);
-
-app.get('/docs/', function (req, res) {
-    res.render('home');
-});
-
-
-/*'use strict';
+'use strict';
 const express = require('express');
 const open = require("open");
 const bodyParser = require('body-parser');
@@ -39,7 +11,7 @@ app.use(express.static('docs'));
 
 
 // Setup server port
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -55,7 +27,7 @@ const citiesRoutes = require('./routes/cities.routes')
 // using as middleware
 app.use('/api/v1/cities', citiesRoutes)
 
-app.set('port', process.env.PORT || 8000);
+app.set('port', port);
 app.set('ip', process.env.NODEJS_IP || '127.0.0.1');
 
 app.listen(app.get('port'), function() {
@@ -63,4 +35,3 @@ app.listen(app.get('port'), function() {
     open("http://localhost:8000");
 
 });
-*/

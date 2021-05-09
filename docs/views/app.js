@@ -2,7 +2,6 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-const path = require('path');
 
 const app = express();
 
@@ -19,6 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // To parse cookies from the HTTP Request
 app.use(cookieParser());
+app.use()
 
 app.engine('hbs', exphbs({
     extname: '.hbs'
@@ -33,7 +33,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/register', (req, res) => {
-    res.render('register');
+    res.render('registration');
 });
 
 const users = [
@@ -114,7 +114,7 @@ app.post('/login', (req, res) => {
         res.cookie('AuthToken', authToken);
 
         // Redirect user to the protected page
-        res.redirect('http://localhost:8000/');
+        res.redirect('/protected');
     } else {
         res.render('login', {
             message: 'Invalid username or password',
@@ -135,7 +135,7 @@ app.use((req, res, next) => {
 
 app.get('/protected', (req, res) => {
     if (req.user) {
-        res.render('http://localhost:8000/');
+        res.render('protected');
     } else {
         res.render('login', {
             message: 'Please login to continue',
