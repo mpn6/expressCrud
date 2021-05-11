@@ -17,6 +17,8 @@ const dbConn = require('./config/db.config');
 const authRouter = require('./auth');
 const citiesRoutes = require('./routes/cities.routes');
 
+const request = require('request');
+
 // App Variables
 const app = express();
 const port = process.env.PORT || '3000';
@@ -122,6 +124,16 @@ app.get('/api/public', (req, res) => {
 app.get('/api/private', checkJwt, (req, res) => {
     res.json({
         message: 'Hello from a private endpoint! Authentication is needed to see this.',
+    });
+});
+
+app.get('/database', secured, (req, res, next) => {
+    request("http://localhost:8000/api/v1/cities", (err, response, body) => {
+        if (err || response.statusCode !== 200) {
+            return res.sendStatus(500);
+        }
+        res.render('database', { title : 'Main page', citiesjson : JSON.parse(body).data });
+        next();
     });
 });
 
