@@ -1,24 +1,9 @@
-Michelle Nunez
+<img width="1440" alt="Screen Shot 2021-05-10 at 9 04 12 PM" src="https://user-images.githubusercontent.com/56059162/117742701-47750800-b1d3-11eb-8175-af5443bb04de.png">
 
-WebPack API CRUD HW
+<img width="1440" alt="Screen Shot 2021-05-10 at 9 04 30 PM" src="https://user-images.githubusercontent.com/56059162/117742720-51970680-b1d3-11eb-875b-2ac112f551ee.png">
 
-Directions: "Put screen shots of the CRUD operations in your ReadmeFile, so I can see that the requests work through PostMan."
+<img width="1440" alt="Screen Shot 2021-05-10 at 9 03 11 PM" src="https://user-images.githubusercontent.com/56059162/117742618-23192b80-b1d3-11eb-9c39-8841b9af4635.png">
 
-**Operation: get / findAll**
+<img width="1440" alt="Screen Shot 2021-05-10 at 9 03 52 PM" src="https://user-images.githubusercontent.com/56059162/117742671-3b894600-b1d3-11eb-9499-8c583a7b58c3.png">
 
-<img width="800" alt="Screen Shot 2021-04-06 at 9 52 50 PM" src="https://user-images.githubusercontent.com/56059162/113799206-a225ca80-9722-11eb-92f4-0db276ee7168.png">
-
-**Operation: get / findById**
-
-<img width="800" alt="Screen Shot 2021-04-06 at 10 04 19 PM" src="https://user-images.githubusercontent.com/56059162/113800047-3cd2d900-9724-11eb-839e-ddce8dace7ce.png">
-
-**Operation: delete / delete**
-
-<img width="800" alt="Screen Shot 2021-04-06 at 10 15 26 PM" src="https://user-images.githubusercontent.com/56059162/113800910-cb942580-9725-11eb-8c0e-a2912f84383c.png">
-
-**Operation: put / update**
-
-<img width="800" alt="Screen Shot 2021-04-06 at 10 28 10 PM" src="https://user-images.githubusercontent.com/56059162/113801814-925cb500-9727-11eb-84e2-0b3e6d047a3f.png">
-
-**Operation: post / create**
-<img width="800" alt="Screen Shot 2021-04-06 at 10 30 27 PM" src="https://user-images.githubusercontent.com/56059162/113801979-e5366c80-9727-11eb-91d7-238c5478e6e1.png">
+<img width="1440" alt="Screen Shot 2021-05-10 at 9 03 52 PM" src="https://user-images.githubusercontent.com/56059162/117742749-62477c80-b1d3-11eb-9d09-5f3e65df4d69.png">
